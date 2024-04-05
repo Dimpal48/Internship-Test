@@ -1,0 +1,11 @@
+fn reverse_string(s: &str) -> String {
+    let mut chars: Vec<char> = s.chars().collect();
+    chars.reverse();
+    chars.into_iter().collect()
+}
+
+fn main() {
+    let s = "dimpal";
+    println!("Original string: {}", s);
+    println!("Reversed string: {}", reverse_string(s));
+}
