@@ -1,0 +1,12 @@
+fn find_median(sorted_array: &[i32]) -> f64 {
+    let len = sorted_array.len();
+    if len % 2 == 0 {
+        // Even number of elements
+        let mid_right = len / 2;
+        let mid_left = mid_right - 1;
+        (sorted_array[mid_left] + sorted_array[mid_right]) as f64 / 2.0
+    } else {
+        // Odd number of elements
+        sorted_array[len / 2] as f64
+    }
+}
